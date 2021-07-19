@@ -1,0 +1,12 @@
+package first;
+
+public class OperatorExam5 {
+
+	public static void main(String[] args) {
+		// »ïÇ×¿¬»êÀÚ
+		int b1 = (5 > 4) ? 50 : 40;
+		System.out.println(b1);
+
+	}
+
+}

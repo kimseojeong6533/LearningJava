@@ -1,0 +1,39 @@
+package second;
+import java.util.Scanner;
+public class InputExercise {
+
+	public static void main(String[] args) throws IOException{
+		/* https://limkydev.tistory.com/170 (java 입출력 참고)*/
+		
+		
+		// int형 입력받기
+		Scanner sc = new Scanner(System.in);
+		int a,b;
+		a = sc.nextInt();
+		b = sc.nextInt();
+		
+		
+		// char형 입력받기
+		char ch;
+		ch = (char)System.in.read();
+		System.out.println(ch);
+		System.out.println();
+		
+		// char형 여러개 입력받기
+		char c,d;
+		Scanner sc2 = new Scanner(System.in);
+		String str = sc2.nextLine();
+		c = str.charAt(0);
+		d = str.charAt(2);
+		System.out.println(c+" "+d);
+		System.out.println();
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

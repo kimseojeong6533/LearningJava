@@ -1,0 +1,10 @@
+package second;
+
+public class Array_2Dimension {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

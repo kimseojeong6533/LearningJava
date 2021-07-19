@@ -1,0 +1,24 @@
+package first;
+
+public class switchExam {
+
+	public static void main(String[] args) {
+		//switch문 구성요소 : switch, case, default, break
+		int value = 1;
+		
+		switch(value) {
+			case 1:
+				System.out.println("1");
+			case 2:
+				System.out.println("1");
+			case 3:
+				System.out.println("1");
+			default :
+				System.out.println("그외 다른숫자");
+			
+			
+		}
+
+	}
+
+}

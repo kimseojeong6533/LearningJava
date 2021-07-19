@@ -1,0 +1,15 @@
+package first;
+
+public class doWhileExam {
+
+	public static void main(String[] args) {
+		
+		int i = 1;
+		do {
+			//반복할 문장들
+			System.out.println(i++);
+		}while(i<=10);
+
+	}
+
+}

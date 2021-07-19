@@ -1,0 +1,12 @@
+package first;
+
+
+public class PrimativeDataTypeExam {
+
+	public static void main(String[] args) {
+		boolean isFun = true;
+		System.out.println(isFun);
+
+	}
+
+}

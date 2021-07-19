@@ -1,0 +1,32 @@
+package second;
+
+
+class Accumulator{
+	
+	static int num = 0;
+	Accumulator(){
+		
+	}
+	
+	static void add(int n) {
+		num+=n;
+	}
+	
+	static void showResult() {
+		System.out.println("°á°ú : "+num);
+	}
+	
+}
+
+public class Test10_1 {
+
+	public static void main(String[] args) {
+		
+		for(int i=0;i<10;i++) {
+			Accumulator.add(i);
+		}
+		Accumulator.showResult();
+
+	}
+
+}

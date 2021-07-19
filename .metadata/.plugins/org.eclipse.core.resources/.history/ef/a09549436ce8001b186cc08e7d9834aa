@@ -1,0 +1,29 @@
+package second;
+
+public class StringExercise {
+
+	public static void main(String[] args) {
+		
+		// String1.concat(String2) : String1과 String2를 연결한 결과 반환
+		String str1 = "Coffee";
+		String str2 = "Bread";
+		
+		String str3 = str1.concat(str2);
+		String str4 = "Fresh".concat(str3);
+		System.out.println(str4);
+		
+		//Substring
+		String str5 = "abcdefg";
+		System.out.println(str5.substring(2));  // 2번재 문자열부터~ 끝까지 
+		System.out.println(str5.substring(2,4));  // 인덱스 2부터 3까지 
+		System.out.println();
+		//
+		String str6 = "my house";
+		System.out.println(str6.equals("my house"));
+		System.out.println(str6.equals("My House"));
+		System.out.println(str6.compareTo("your house"));  // str6의 m이 your house의 y보다 앞서기 때문에 0보다 작은 값이 반환됨.
+		
+
+	}
+
+}

@@ -1,0 +1,31 @@
+package second;
+
+class SimpleBox{
+	private int data;
+	
+	SimpleBox(int datas){
+		this.data = datas;  // 매개변수 data의 값을 인스턴스변수 data에 저장한다 는 의미
+	}
+	
+	void setData(int datas) {
+		this.data = datas;
+	}
+	
+	int getData() {
+		return this.data;
+	}
+}
+
+
+public class ThisInst {
+
+	public static void main(String[] args) {
+		SimpleBox box = new SimpleBox(99);
+		System.out.println(box.getData());
+		
+		box.setData(77);
+		System.out.println(box.getData());
+
+	}
+
+}
