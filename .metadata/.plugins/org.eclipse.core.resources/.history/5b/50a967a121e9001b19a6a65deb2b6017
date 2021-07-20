@@ -1,0 +1,35 @@
+package second;
+
+class Cake{
+	public void sweet() {
+		System.out.println("Cake");
+	}
+}
+
+class CheeseCake extends Cake{
+	public void milky() {
+		System.out.println("CheeseCake");
+	}
+}
+
+class StrawberryCheeseCake extends CheeseCake{
+	public void sour() {
+		System.out.println("StrawberryCheeseCake");
+	}
+}
+
+public class YummyCakeOveriding {
+
+	public static void main(String[] args) {
+		CheeseCake ca1 = new CheeseCake();  // ca2는 CheeseCake객체이자, Cake객체이다.
+		Cake ca2 = ca1;   // 따라서, Cake의 참조변수가 ca2(CheeseCake)를 참조하는 것이 가능하다.
+		
+		ca2.sweet();
+		ca2.milky();
+		
+//		Cake ca3 = new CheeseCake();
+//		CheeseCake ca4 = ca3;
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package second;
+
+class ParentAdder{
+	public int add(int a, int b) {
+		return a+b;
+	}
+}
+
+class ChildAdder extends ParentAdder{
+	public double add(double a, double b) {
+		System.out.println("µ¡¼ÀÀÇ °á°ú : ");
+		return a+b;
+	}
+}
+
+public class Annotation {
+
+	public static void main(String[] args) {
+		//ParentAdder p = new ParentAdder();
+		ChildAdder c = new ChildAdder();
+		
+		System.out.println(c.add(4, 5));
+		
+
+	}
+
+}

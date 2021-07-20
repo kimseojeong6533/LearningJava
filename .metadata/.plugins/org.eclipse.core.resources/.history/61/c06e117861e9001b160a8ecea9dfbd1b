@@ -1,0 +1,53 @@
+package second;
+
+
+/**
+ 
+ - 한 클래스는 여러가지 인터페이스를 동시에 구현할 수 있다. 
+ - 상속과 구현은 동시에 가능하다 
+ -  ex) class robot extends machine implements Movable, Runnable {...}
+ */
+
+interface Printable{    // 인터페이스 선언
+	void print(String doc);   // 추상메소드, Abstract Method (메소드의 몸체가 비어있는 메소드)
+}
+
+interface ColorPrintable extends Printable{   // ColorPrintable인터페이스가 Printer를 상속한다(물려받는다) 
+	void printCMYK(String doc);   // ColorPrintable -> printCMYK, print 
+}
+
+class Prn909Drv implements ColorPrintable  {  //Printer클래스가 Printable이라는 인터페이스를 구현(implements)한다.  
+	@Override                   // 인터페이스의 추상메소드(print)와 이를 구현하는 메소드사이에 오버라이딩 관계가 성립한다. 즉, @Override의 선언이 가능 
+	public void print(String doc) {
+		System.out.println("From MD-909 black & white");
+		System.out.println(doc);
+	}
+	
+	@Override
+	public void printCMYK(String doc) {
+		System.out.println("From MD-909 CMYK ver");
+		System.out.println(doc);
+	}
+}
+
+public class PrintableInterface {
+
+	public static void main(String[] args) {
+		
+		//		Printable prn = new Printer();    // 인터페이스의 형(Printable)을 대상으로 참조변수(prn) 선언
+		//		prn.print("Hello Java");
+		
+		String myDoc = "This is report about ...";
+		ColorPrintable prn = new Prn909Drv();
+		prn.print(myDoc);
+		System.out.println();
+		prn.printCMYK(myDoc);
+		System.out.println();
+		Printable prn2 = new Prn909Drv();
+		prn2.print(myDoc);
+		
+		
+
+	}
+
+}

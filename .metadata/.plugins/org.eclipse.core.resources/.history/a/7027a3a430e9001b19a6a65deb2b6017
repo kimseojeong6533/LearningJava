@@ -1,0 +1,26 @@
+package second;
+
+class Cake2{
+	public void yummy() {
+		System.out.println("Yummy Cake");
+	}
+}
+
+class CheeseCake2 extends Cake2{
+	public void yummy() {
+		System.out.println("Yummy Cheese Cake");
+	}
+}
+public class YummyCakeOverring2 {
+
+	public static void main(String[] args) {
+		Cake2 c1 = new Cake2();
+		Cake2 c2 = new CheeseCake2();
+		CheeseCake2 c3 = new CheeseCake2();
+		
+		c1.yummy();
+		c2.yummy();
+		c3.yummy();
+	}
+
+}

@@ -1,0 +1,48 @@
+package second;
+
+// 인터페이스 디폴트 메소드를 사용해보자 (default void 메소드명((매개변수)) {}   
+
+interface Printable2{
+	void print(String doc);
+	default void printCMYK(String doc) {} // 인터페이스에서 디폴트 메소드 선언 
+}
+
+class Prn731Drv implements Printable2{
+	@Override
+	public void print(String doc) {
+		System.out.println("From MD-731 printer");
+		System.out.println(doc);
+		
+	}
+}
+
+class Prn908Drv implements Printable2{
+	@Override
+	public void print(String doc) {
+		System.out.println("From Md-908 black & white ver");
+		System.out.println(doc);
+	}
+	
+	@Override
+	public void printCMYK(String doc) {
+		System.out.println("From MD-908 CMYK ver");
+		System.out.println(doc);
+	}
+}
+
+public class PrinterDriver4 {
+
+	public static void main(String[] args) {
+		Printable2 prn1 = new Prn731Drv();
+		Printable2 prn2 = new Prn908Drv();
+		String myDoc = "This is Interface Exercise!!";
+		
+		prn1.print(myDoc);
+		prn2.print(myDoc);  // print메소드가 호출되었으므로 해당 메소드 내용이 나오고, 디폴트 메소드로 정의한 printCMYK함수 내용이 자동으로 나옴.
+		System.out.println();
+		//prn2.printCMYK(myDoc); // <- 오류, 디폴트 메소드를 메인에서 명시적으로 호출안됨.
+	
+
+	}
+
+}

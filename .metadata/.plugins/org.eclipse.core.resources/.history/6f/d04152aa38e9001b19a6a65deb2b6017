@@ -1,0 +1,42 @@
+package second;
+
+class Box{
+	public void simpleWrap() {
+		System.out.println("Simple Wrapping");
+	}
+}
+
+class PaperBox extends Box{
+	public void paperWrap() {
+		System.out.println("Paper Wrapping");
+	}
+}
+
+class GoldPaperBox extends PaperBox{
+	public void goldWrap() {
+		System.out.println("Gold PaperBox Wrapping");
+	}
+}
+
+public class Wrapping {
+
+	public static void main(String[] args) {
+		Box box1 = new Box();
+		PaperBox box2 = new PaperBox();
+		GoldPaperBox box3 = new GoldPaperBox();
+		
+	
+	public static void WrapBox(Box box) {  // 가장 상위 클래스를 매개변수로 (하위클래스로 타입캐스팅이 가능하니깐)
+		if(box instanceof Box) {
+			box.simpleWrap();
+		}
+		else if(box instanceof PaperBox) {
+			((PaperBox) box).paperWrap();  // 
+		}
+		else {
+			((GoldPaperBox) box).goldWrap();
+		}
+	}
+		
+
+}
