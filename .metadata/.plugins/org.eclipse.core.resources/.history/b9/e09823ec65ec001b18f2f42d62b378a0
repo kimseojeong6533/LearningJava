@@ -1,0 +1,54 @@
+package second;
+
+/**
+ 
+ Obj클래스(최상위 클래스)에는 인스턴스 복사를 위한 메소드가 이미 정의되어 있음.
+ => protected Object clone() throws CloneNotSupportedException;  //복사본의 참조값이 반환됨.
+ 
+ interface Cloneable <- 이 인터페이스를 구현한 클래스의 인스턴스만 clone 메소드가 호출가능하다.
+ 
+ 
+ */
+
+class Point_clone implements Cloneable{  // 인스턴스를 복사를 위해 Cloneable를 인터페이스를 구현
+	private int xPos;
+	private int yPos;
+	
+	public Point_clone(int x, int y) {
+		xPos = x;
+		yPos = y;
+	}
+	
+	public void showPosition() {
+		System.out.printf("[%d, %d]", xPos, yPos);
+		System.out.println();
+	}
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException{  // clone메소드 
+		return super.clone();
+	}
+}
+
+public class InstanceCloning {
+
+	public static void main(String[] args) {
+		Point_clone p1 = new Point_clone(1,2);
+		
+		Point_clone p2;
+		
+		try {
+			p2 = (Point_clone) p1.clone();
+			p1.showPosition();
+			p2.showPosition();
+			
+		}
+		catch(CloneNotSupportedException e){
+			e.printStackTrace();
+		}
+		
+		
+
+	}
+
+}

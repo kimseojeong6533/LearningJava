@@ -10,7 +10,7 @@ package second;
 
 interface Printable2{
 	void print(String doc);
-	default void printCMYK(String doc) {} // 인터페이스에서 디폴트 메소드 선언 
+	default void printCMYK(String doc) {} // 인터페이스에서 디폴트 메소드 선언
 }
 
 class Prn731Drv implements Printable2{
@@ -44,10 +44,11 @@ public class PrinterDriver4 {
 		String myDoc = "This is Interface Exercise!!";
 		
 		prn1.print(myDoc);
-		System.out.println();
-		prn2.print(myDoc);  // print메소드가 호출되었으므로 해당 메소드 내용이 나오고, 디폴트 메소드로 정의한 printCMYK함수 내용이 자동으로 나옴.
-		System.out.println();
-		prn2.printCMYK(myDoc);
+		prn1.printCMYK(myDoc);
+//		System.out.println();
+//		prn2.print(myDoc);  // print메소드가 호출되었으므로 해당 메소드 내용이 나오고, 디폴트 메소드로 정의한 printCMYK함수 내용이 자동으로 나옴.
+//		System.out.println();
+//		prn2.printCMYK(myDoc);
 		
 		
 	
