@@ -1,0 +1,29 @@
+package abstractClassExer;
+
+public class AICar extends Car{
+
+	@Override
+	public void drive() {
+		System.out.println("자율주행을 합니다");
+		System.out.println("자동차가 스스로 방향을 바꿉니다");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("장애물앞에서 스스로 멈춥니다");
+		
+	}
+
+	@Override
+	public void wiper() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void washCar() {    //상속받은 클래스에 따라서 메서드 재정의 
+		System.out.println("자동세차");
+	}
+	
+	
+
+}
