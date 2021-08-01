@@ -51,14 +51,14 @@ public class MyArray {
 		count++;
 	}
 	
-	public void removeElement(int position) {
+	public int removeElement(int position) {
 		if(position<0 || position>=ARRAY_SIZE) {
 			System.out.println("POSITION ERROR");
-			return; 
+			return ERROR_NUM; 
 		}
-		
+		int ret = intArr[position];
 		intArr[position] = 0;
-		return;
+		return ret;
 	}
 	
 	public int getSize() {  // 배열의 크기를 반환
@@ -87,6 +87,7 @@ public class MyArray {
 			intArr[i] = 0;
 		}
 	}
+	
 	
 	
 }
