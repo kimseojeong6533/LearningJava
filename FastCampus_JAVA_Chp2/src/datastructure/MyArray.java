@@ -1,20 +1,20 @@
 package datastructure;
 //Array 구현하기
 
-public class Array {
+public class MyArray {
 	int [] intArr;
 	int count;     //array내 요소의 실개수
 	
 	public int ARRAY_SIZE;   // array의 크기
 	public static final int ERROR_NUM = -99999999;
 	
-	public Array() {
+	public MyArray() {
 		count = 0;
 		ARRAY_SIZE = 10;
 		intArr = new int[ARRAY_SIZE];
 	}
 	
-	public Array(int size) {
+	public MyArray(int size) {
 		count = 0;
 		ARRAY_SIZE = size;
 		intArr = new int[ARRAY_SIZE];
