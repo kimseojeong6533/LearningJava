@@ -1,4 +1,5 @@
 package datastructure;
+//Array 구현하기
 
 public class Array {
 	int [] intArr;
