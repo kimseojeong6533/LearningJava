@@ -3,8 +3,8 @@ package fileInputOutputStreamWithChar;
 import java.io.FileReader;
 import java.io.IOException;
 
-/**
- 문자단위 입출력 스트림(문자, 한글을 읽고 쓰는데 사용) ->  FileReader, 
+/*
+ 문자단위 입출력 스트림(문자, 한글을 읽고 쓰는데 사용) ->  FileReader
  */
 
 public class FileReaderTest {
