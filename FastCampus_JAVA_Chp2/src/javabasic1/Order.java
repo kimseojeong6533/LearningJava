@@ -1,4 +1,4 @@
-package ch01;
+package javabasic1;
 
 public class Order {
 

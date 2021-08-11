@@ -1,4 +1,4 @@
-package ch06;
+package javabasic2;
 
 public class StudentTest {
 
